@@ -95,7 +95,7 @@ module Rack
             else
               # Since WEBrick won't accept repeated headers,
               # merge the values per RFC 1945 section 4.2.
-              res[k] = vs.split("\n").join(", ")
+              res[k] = vs.to_s.split("\n").join(", ")
             end
           }
 
